@@ -6,10 +6,12 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -47,6 +49,14 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun CarterinhaDigitalApp( modifier: Modifier = Modifier ){
+    Box(){
+        Image(
+            painter = painterResource( R.drawable.stichfundo),
+            contentDescription = "Fundo da Carteirinha",
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.fillMaxSize()
+        )
+    }
     Column(
         modifier = modifier,
         horizontalAlignment =  Alignment.CenterHorizontally,
@@ -57,6 +67,8 @@ fun CarterinhaDigitalApp( modifier: Modifier = Modifier ){
             modifier= Modifier
                 .weight(.5f)
             .padding(top= 10.dp)
+            .fillMaxWidth(.7f)
+
 
 
 
@@ -67,9 +79,10 @@ fun CarterinhaDigitalApp( modifier: Modifier = Modifier ){
             contentScale = ContentScale.Crop,
             modifier= Modifier
                 .weight(.2f)
-                .size(200.dp)
+                //.size(200.dp)
                 .clip(CircleShape)
                 .aspectRatio(1f)
+                .fillMaxWidth(.8f)
         )
 
     Row(modifier= Modifier.weight(.2f)
@@ -77,14 +90,19 @@ fun CarterinhaDigitalApp( modifier: Modifier = Modifier ){
             Text( "Nome")
             Text("Gabrieli da Silva Marcelino")
         }
-        Row(modifier= Modifier.weight(3f)
+        Row(modifier= Modifier.
+        weight(3f)
+            .fillMaxWidth(.6f)
         ){
             Text("Curso")
             Text("Tecnico Análise de Desenvolvimento de Sistemas")
 
         }
         QrCode("90000000001417015720",
-            modifier= Modifier.weight(2f)
+            modifier= Modifier
+                .weight(2f)
+                .fillMaxWidth(.6f)
+                //.clip()
 
         )
     }
