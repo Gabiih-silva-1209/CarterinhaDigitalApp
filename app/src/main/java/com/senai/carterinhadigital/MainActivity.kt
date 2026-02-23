@@ -8,15 +8,21 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.rafaelcosta.myapplication.QrCode
 import com.senai.carterinhadigital.ui.theme.CarterinhaDigitalTheme
 
@@ -26,13 +32,18 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             CarterinhaDigitalTheme {
-              //  Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    CarterinhaDigitalApp(
+                        modifier = Modifier
+                            .padding( innerPadding)
+                            .fillMaxSize()
+                    )
 
                 }
             }
         }
     }
-
+}
 
 @Composable
 fun CarterinhaDigitalApp( modifier: Modifier = Modifier ){
@@ -43,28 +54,37 @@ fun CarterinhaDigitalApp( modifier: Modifier = Modifier ){
         Image(
             painter = painterResource(R.drawable.logosenai),
             contentDescription = "Logo SENAI",
-            modifier= Modifier.weight(),
+            modifier= Modifier
+                .weight(.5f)
+            .padding(top= 10.dp)
+
 
 
         )
         Image(
             painter = painterResource( R.drawable.login),
                     contentDescription = "Foto de Perfil",
-            modifier= Modifier.weight(),
+            contentScale = ContentScale.Crop,
+            modifier= Modifier
+                .weight(.2f)
+                .size(200.dp)
+                .clip(CircleShape)
+                .aspectRatio(1f)
         )
-        Row(modifier= Modifier.weight()
+
+    Row(modifier= Modifier.weight(.2f)
             ){
             Text( "Nome")
             Text("Gabrieli da Silva Marcelino")
         }
-        Row(modifier= Modifier.weight()
+        Row(modifier= Modifier.weight(3f)
         ){
             Text("Curso")
             Text("Tecnico Análise de Desenvolvimento de Sistemas")
 
         }
         QrCode("90000000001417015720",
-            modifier= Modifier.weight()
+            modifier= Modifier.weight(2f)
 
         )
     }
