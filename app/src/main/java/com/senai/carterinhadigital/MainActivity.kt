@@ -21,6 +21,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -148,6 +149,9 @@ fun CarterinhaDigitalApp( modifier: Modifier = Modifier ){
         ) {
             Text("Aperte aqui")
         }
+        TextField(
+
+        )
         QrCode("90000000001417015720",
             modifier= Modifier
                 .weight(3f)
