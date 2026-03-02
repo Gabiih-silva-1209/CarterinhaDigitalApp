@@ -145,7 +145,9 @@ fun CarterinhaDigitalApp( modifier: Modifier = Modifier ){
 
         Button(
             onClick = {}
-        ) { }
+        ) {
+            Text("Aperte aqui")
+        }
         QrCode("90000000001417015720",
             modifier= Modifier
                 .weight(3f)
