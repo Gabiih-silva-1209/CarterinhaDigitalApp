@@ -1,4 +1,4 @@
-package com.senai.carterinhadigital
+package com.senai.carterinhadigital.app
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -15,13 +15,11 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -29,15 +27,15 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.rafaelcosta.myapplication.QrCode
-import com.senai.carterinhadigital.ui.theme.CarterinhaDigitalTheme
+import com.senai.carterinhadigital.R
+import com.senai.carterinhadigital.Valuetext
+import com.senai.carterinhadigital.core.designsystem.theme.CarterinhaDigitalTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -73,6 +71,9 @@ fun CarterinhaDigitalApp( modifier: Modifier = Modifier ){
         horizontalAlignment =  Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(10.dp)
     ){
+        Spacer(
+            modifier = Modifier.weight(.2f)
+        )
         Image(
             painter = painterResource(R.drawable.logosenai),
             contentDescription = "Logo SENAI",
@@ -140,7 +141,7 @@ fun CarterinhaDigitalApp( modifier: Modifier = Modifier ){
                 fontSize = 25.sp,
 
 
-            )
+                )
 
         }
 
@@ -149,9 +150,9 @@ fun CarterinhaDigitalApp( modifier: Modifier = Modifier ){
         ) {
             Text("Aperte aqui")
         }
-        TextField(
 
-        )
+
+
         QrCode("90000000001417015720",
             modifier= Modifier
                 .weight(3f)
