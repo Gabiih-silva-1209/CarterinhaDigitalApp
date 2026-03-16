@@ -1,4 +1,4 @@
-package com.senai.carterinhadigital
+package com.senai.carterinhadigital.core.designsystem.feature.components.presentation
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -17,5 +17,6 @@ fun LabelText(
         style = MaterialTheme.typography.bodyLarge,
         fontFamily = MaterialTheme.typography.bodyLarge.fontFamily,
         modifier = modifier,
+        color = MaterialTheme.colorScheme.onSurface
     )
 }

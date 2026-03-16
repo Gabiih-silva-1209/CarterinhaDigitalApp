@@ -1,4 +1,4 @@
-package com.senai.carterinhadigital
+package com.senai.carterinhadigital.core.designsystem.feature.components.presentation
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme

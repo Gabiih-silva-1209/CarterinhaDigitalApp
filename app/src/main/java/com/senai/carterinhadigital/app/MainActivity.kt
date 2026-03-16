@@ -34,7 +34,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.rafaelcosta.myapplication.QrCode
 import com.senai.carterinhadigital.R
-import com.senai.carterinhadigital.Valuetext
+import com.senai.carterinhadigital.core.designsystem.feature.components.presentation.Valuetext
 import com.senai.carterinhadigital.core.designsystem.theme.CarterinhaDigitalTheme
 
 class MainActivity : ComponentActivity() {
