@@ -238,7 +238,7 @@ private val highContrastDarkColorScheme = darkColorScheme(
 fun CarterinhaDigitalTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
 
-    content: @Composable() () -> Unit
+    content: @Composable () -> Unit
 ) {
   val colorScheme = when {
 
