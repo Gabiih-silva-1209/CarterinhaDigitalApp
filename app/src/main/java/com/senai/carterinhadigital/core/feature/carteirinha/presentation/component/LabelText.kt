@@ -1,4 +1,5 @@
-package com.senai.carterinhadigital.feature.carteirinha.presentation.component
+package com.senai.carterinhadigital.core.feature.carteirinha.presentation.component
+
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text

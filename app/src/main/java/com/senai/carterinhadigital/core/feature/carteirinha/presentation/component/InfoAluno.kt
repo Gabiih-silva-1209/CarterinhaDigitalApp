@@ -1,7 +1,10 @@
-package com.senai.carterinhadigital.feature.carteirinha.presentation.component
+package com.senai.carterinhadigital.core.feature.carteirinha.presentation.component
+
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -9,8 +12,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
-import com.senai.carterinhadigital.core.feature.carteirinha.presentation.component.LabelText
-import com.senai.carterinhadigital.core.feature.carteirinha.presentation.component.ValueText
+import androidx.compose.ui.unit.sp
+import com.senai.carterinhadigital.core.designsystem.feature.components.presentation.LabelText
+import com.senai.carterinhadigital.core.designsystem.feature.components.presentation.ValueText
 
 @Composable
 fun InfoAluno(
