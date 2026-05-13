@@ -1,4 +1,4 @@
-package com.senai.carterinhadigital.feature.unidadecurricular.data.repository.FakeUnidadeRepository
+package com.senai.carterinhadigital.feature.unidadecurricular.data.repository
 
 import com.senai.carterinhadigital.feature.unidadecurricular.domain.model.UnidadeCurricular
 import kotlinx.coroutines.delay

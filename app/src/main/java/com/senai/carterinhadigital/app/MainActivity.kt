@@ -35,8 +35,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.rafaelcosta.myapplication.QrCode
 import com.senai.carterinhadigital.R
+import com.senai.carterinhadigital.core.designsystem.theme.CarteirinhaDigitalTheme
 import com.senai.carterinhadigital.core.feature.components.presentation.Valuetext
-import com.senai.carterinhadigital.core.designsystem.theme.CarterinhaDigitalTheme
+
 
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterial3Api::class)
@@ -44,7 +45,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            CarterinhaDigitalTheme {
+            CarteirinhaDigitalTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     CarterinhaDigitalApp(
                         modifier = Modifier
@@ -172,7 +173,7 @@ fun CarterinhaDigitalApp( modifier: Modifier = Modifier ){
 
 @Composable
 fun  PreviewCarterinhaDigitalAppClaro(){
-    CarterinhaDigitalTheme(darkTheme = false) {
+    CarteirinhaDigitalTheme(darkTheme = false) {
         CarterinhaDigitalApp( modifier = Modifier.padding(16.dp))
     }
 }
@@ -184,7 +185,7 @@ fun  PreviewCarterinhaDigitalAppClaro(){
 
 @Composable
 fun PreviewCarterinhaDigitalAppEscuro(){
-    CarterinhaDigitalTheme(darkTheme = true) {
+    CarteirinhaDigitalTheme(darkTheme = true) {
         CarterinhaDigitalApp(modifier = Modifier.padding(16.dp))
     }
 }

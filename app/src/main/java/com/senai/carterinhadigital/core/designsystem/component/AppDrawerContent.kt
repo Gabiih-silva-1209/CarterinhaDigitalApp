@@ -1,6 +1,5 @@
 package com.senai.carterinhadigital.core.designsystem.component
 
-
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -20,7 +19,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-
 @Composable
 fun AppDrawerContent(
     usuarioNome: String,

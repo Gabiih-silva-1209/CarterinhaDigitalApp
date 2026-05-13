@@ -1,4 +1,4 @@
-package com.senai.carterinhadigital.feature.home.presentation.screen
+package com.senai.carterinhadigital.feature.unidadecurricular.presentation.screen
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -9,39 +9,37 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.senai.carterinhadigital.core.designsystem.component.AppDrawerItem
 import com.senai.carterinhadigital.core.designsystem.component.AppScaffold
-import com.senai.carterinhadigital.feature.home.presentation.HomeEvent
-import com.senai.carterinhadigital.feature.home.presentation.HomeViewModel
-
-
+import com.senai.carterinhadigital.feature.unidadecurricular.presentation.UnidadeCurricularEvent
+import com.senai.carterinhadigital.feature.unidadecurricular.presentation.UnidadeCurricularViewModel
 
 @Composable
-fun HomeScreen(
+fun UnidadeCurricularScreen(
     usuarioNome: String,
     usuarioDescricao: String,
     drawerItems: List<AppDrawerItem>,
     onLogoutClick: () -> Unit,
     modifier: Modifier = Modifier,
-    onCarteirinhaClick: () -> Unit,
-    onUnidadesCurricularesClick: () -> Unit,
-    viewModel: HomeViewModel = viewModel()
+    onBackClick: () -> Unit,
+    viewModel: UnidadeCurricularViewModel = viewModel()
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
     AppScaffold(
-        title = "Início",
-        subtitle = "Área do aluno",
+        title = "Unidades Curriculares",
+        subtitle = "Notas, médias e faltas",
         usuarioNome = usuarioNome,
         usuarioDescricao = usuarioDescricao,
         drawerItems = drawerItems,
-        onLogoutClick = onLogoutClick
+        onLogoutClick = onLogoutClick,
+        showBackButton = true,
+        onBackClick = onBackClick
     ) { innerPadding ->
-        HomeContent(
-            uiState = uiState.copy(nomeAluno = usuarioNome),
+        UnidadeCurricularContent(
+            uiState = uiState,
             onEvent = { event ->
-                viewModel.onEvent(event)
                 when (event) {
-                    HomeEvent.OnCarteirinhaClick -> onCarteirinhaClick()
-                    HomeEvent.OnUnidadesCurricularesClick -> onUnidadesCurricularesClick()
+                    UnidadeCurricularEvent.OnVoltarClick -> onBackClick()
+                    else -> viewModel.onEvent(event)
                 }
             },
             modifier = modifier
