@@ -16,7 +16,8 @@ class FakeUnidadeCurricularRepository : UnidadeCurricularRepository {
                 UnidadeCurricular("5", "Arquitetura de Software", "Diego Santos", 9.5, 9.0, 9.25, 0),
                 UnidadeCurricular("6", "Internet das Coisas", "Fernanda Oliveira", 7.5, 8.5, 8.0, 3),
                 UnidadeCurricular("7", "Projetos Integradores", "Marcos Pereira", 10.0, 9.5, 9.75, 0),
-                UnidadeCurricular("8", "Computação em Nuvem", "Juliana Rocha", 8.0, 7.5, 7.75, 2)
+                UnidadeCurricular("8", "Computação em Nuvem", "Juliana Rocha", 8.0, 7.5, 7.75, 2),
+                UnidadeCurricular("9", "Matemática", "João", 8.0,9.0,8.5, 0)
             )
         )
     }
