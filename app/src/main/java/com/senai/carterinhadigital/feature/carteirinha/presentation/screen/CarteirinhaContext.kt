@@ -36,7 +36,7 @@ fun CarteirinhaContent(
 ) {
     Box(modifier = modifier.fillMaxSize()) {
         Image(
-            painter = painterResource(R.drawable.plano_de_fundo),
+            painter = painterResource(R.drawable.stichfundo),
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = Modifier

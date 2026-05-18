@@ -1,9 +1,13 @@
 package com.senai.carterinhadigital.feature.carteirinha.data.repository
 
+
 import com.senai.carterinhadigital.feature.carteirinha.domain.model.Carteirinha
+import kotlinx.coroutines.delay
 
 class FakeCarteirinhaRepository : CarteirinhaRepository {
-    override suspend fun buscarCarteirinha(): Result<Routes.Carteirinha> {
+
+    override suspend fun buscarCarteirinha(): Result<Carteirinha> {
+
         delay(1500)
 
         return Result.success(

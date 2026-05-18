@@ -1,5 +1,6 @@
 package com.senai.carterinhadigital.core.feature.auth.presentation
 
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -8,6 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
 import com.senai.carterinhadigital.core.designsystem.navigation.Routes
 
+@Composable
 fun LoginScreen(modifier: Modifier = Modifier,
                 navController: NavController
 ) {

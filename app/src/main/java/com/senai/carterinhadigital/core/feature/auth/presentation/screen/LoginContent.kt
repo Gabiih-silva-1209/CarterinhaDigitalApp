@@ -17,8 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.senai.carterinhadigital.app.CarterinhaDigitalApp
-import com.senai.carterinhadigital.core.designsystem.theme.CarterinhaDigitalTheme
+import com.senai.carterinhadigital.core.designsystem.theme.CarteirinhaDigitalTheme
 
 @Composable
 fun LoginContent(
@@ -78,8 +77,8 @@ fun LoginContent(
 )
 @Composable
 fun PreviewLoginContentClaro() {
-    CarterinhaDigitalApp(darkTheme = false) {
-        LoginContent( )
+    CarteirinhaDigitalTheme(darkTheme = false) {
+        LoginContent()
     }
 }
 
@@ -89,15 +88,15 @@ fun PreviewLoginContentClaro() {
 )
 @Composable
 fun PreviewLoginContentEscuro() {
-    CarterinhaDigitalApp(darkTheme = true) {
-        LoginContent( )
+    CarteirinhaDigitalTheme(darkTheme = true) {
+        LoginContent()
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 fun PreviewLogin() {
-    CarterinhaDigitalTheme {
+    CarteirinhaDigitalTheme {
         LoginContent()
     }
 }

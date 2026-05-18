@@ -13,9 +13,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.senai.carterinhadigital.core.designsystem.feature.components.presentation.LabelText
-import com.senai.carterinhadigital.core.designsystem.feature.components.presentation.ValueText
-
 @Composable
 fun InfoAluno(
     modifier: Modifier = Modifier,

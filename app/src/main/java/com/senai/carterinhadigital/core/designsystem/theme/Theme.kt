@@ -84,7 +84,7 @@ private val darkScheme = darkColorScheme(
 @Composable
 fun CarteirinhaDigitalTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    content: @Composable() () -> Unit
+    content: @Composable () -> Unit
 ) {
 
     val colorScheme = when {
